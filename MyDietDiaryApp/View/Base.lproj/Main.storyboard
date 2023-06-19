@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4GK-L7-rTZ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Graph View Controller-->
+        <scene sceneID="Idr-Q4-grT">
+            <objects>
+                <viewController id="sMO-oH-HhM" customClass="GraphViewController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="19X-c6-Z2u">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEr-xh-J8d" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="159" width="393" height="510"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ1-7i-uYk">
+                                <rect key="frame" x="10" y="98" width="40" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Mn6-0a-XoR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgi-V1-jx8">
+                                <rect key="frame" x="70" y="91.666666666666671" width="140" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="XmW-HV-xU3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xra-sg-oxh">
+                                <rect key="frame" x="220" y="98" width="13" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBY-oK-IHo">
+                                <rect key="frame" x="243" y="91.666666666666671" width="140" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="IU1-ed-QgX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9DA-6S-Trm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9DA-6S-Trm" firstAttribute="bottom" secondItem="eEr-xh-J8d" secondAttribute="bottom" constant="100" id="1CR-n4-DD2"/>
+                            <constraint firstItem="Xra-sg-oxh" firstAttribute="centerY" secondItem="qJ1-7i-uYk" secondAttribute="centerY" id="1Q2-ek-atb"/>
+                            <constraint firstItem="eEr-xh-J8d" firstAttribute="leading" secondItem="9DA-6S-Trm" secondAttribute="leading" id="3R9-Qk-Wez"/>
+                            <constraint firstItem="fgi-V1-jx8" firstAttribute="centerY" secondItem="qJ1-7i-uYk" secondAttribute="centerY" id="GpB-tt-r1M"/>
+                            <constraint firstItem="fgi-V1-jx8" firstAttribute="leading" secondItem="qJ1-7i-uYk" secondAttribute="trailing" constant="20" id="YWb-d3-xy7"/>
+                            <constraint firstItem="eEr-xh-J8d" firstAttribute="top" secondItem="9DA-6S-Trm" secondAttribute="top" constant="100" id="Zgx-Fw-on9"/>
+                            <constraint firstItem="eEr-xh-J8d" firstAttribute="top" secondItem="qJ1-7i-uYk" secondAttribute="bottom" constant="40" id="aVc-nF-SL2"/>
+                            <constraint firstItem="qJ1-7i-uYk" firstAttribute="leading" secondItem="9DA-6S-Trm" secondAttribute="leading" constant="10" id="al4-M5-ODE"/>
+                            <constraint firstItem="eEr-xh-J8d" firstAttribute="trailing" secondItem="9DA-6S-Trm" secondAttribute="trailing" id="jkY-zY-WwU"/>
+                            <constraint firstItem="BBY-oK-IHo" firstAttribute="centerY" secondItem="qJ1-7i-uYk" secondAttribute="centerY" id="kTI-aZ-Rye"/>
+                            <constraint firstItem="BBY-oK-IHo" firstAttribute="leading" secondItem="Xra-sg-oxh" secondAttribute="trailing" constant="10" id="orl-Q4-2CL"/>
+                            <constraint firstItem="9DA-6S-Trm" firstAttribute="trailing" secondItem="BBY-oK-IHo" secondAttribute="trailing" constant="10" id="rLe-dN-ukg"/>
+                            <constraint firstItem="Xra-sg-oxh" firstAttribute="leading" secondItem="fgi-V1-jx8" secondAttribute="trailing" constant="10" id="xjY-gX-XG5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="graphicon" id="Kuq-e4-tHt"/>
+                    <connections>
+                        <outlet property="endDateTextField" destination="BBY-oK-IHo" id="av4-HF-Rl6"/>
+                        <outlet property="graphView" destination="eEr-xh-J8d" id="g6H-eH-NmT"/>
+                        <outlet property="startDateTextField" destination="fgi-V1-jx8" id="sq8-6r-WnZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2O-lR-nNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127.48091603053435" y="221.83098591549296"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="4GZ-Rg-3K6">
+            <objects>
+                <viewController id="tNa-Gj-ldX" customClass="CalendarViewController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GdN-vk-MX2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQa-13-eZJ" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="209" width="353" height="460"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0h-uZ-YJK">
+                                <rect key="frame" x="323" y="699" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gxh-KM-X5G"/>
+                                    <constraint firstAttribute="width" constant="50" id="pCv-eL-HrY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="＋">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButton:" destination="tNa-Gj-ldX" eventType="touchUpInside" id="PnY-0a-PAA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7jU-hL-VEe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VQa-13-eZJ" firstAttribute="leading" secondItem="7jU-hL-VEe" secondAttribute="leading" constant="20" id="3gY-PL-85m"/>
+                            <constraint firstItem="7jU-hL-VEe" firstAttribute="bottom" secondItem="VQa-13-eZJ" secondAttribute="bottom" constant="100" id="3kw-ib-d7v"/>
+                            <constraint firstItem="VQa-13-eZJ" firstAttribute="top" secondItem="7jU-hL-VEe" secondAttribute="top" constant="150" id="7Wi-As-cQM"/>
+                            <constraint firstItem="7jU-hL-VEe" firstAttribute="bottom" secondItem="VQa-13-eZJ" secondAttribute="bottom" constant="100" id="8y1-W5-tQ6"/>
+                            <constraint firstItem="7jU-hL-VEe" firstAttribute="trailing" secondItem="VQa-13-eZJ" secondAttribute="trailing" constant="20" id="Hz4-Rt-ay2"/>
+                            <constraint firstItem="VQa-13-eZJ" firstAttribute="top" secondItem="7jU-hL-VEe" secondAttribute="top" constant="150" id="JFy-lg-g1C"/>
+                            <constraint firstItem="7jU-hL-VEe" firstAttribute="trailing" secondItem="VQa-13-eZJ" secondAttribute="trailing" constant="20" id="K6o-5B-UWa"/>
+                            <constraint firstItem="7jU-hL-VEe" firstAttribute="bottom" secondItem="VQa-13-eZJ" secondAttribute="bottom" constant="100" id="KP7-zW-q30"/>
+                            <constraint firstItem="VQa-13-eZJ" firstAttribute="top" secondItem="7jU-hL-VEe" secondAttribute="top" constant="150" id="Rey-MB-wNh"/>
+                            <constraint firstItem="VQa-13-eZJ" firstAttribute="leading" secondItem="7jU-hL-VEe" secondAttribute="leading" constant="20" id="T6C-ji-TXb"/>
+                            <constraint firstItem="7jU-hL-VEe" firstAttribute="trailing" secondItem="O0h-uZ-YJK" secondAttribute="trailing" constant="20" id="UXW-2A-aHW"/>
+                            <constraint firstItem="VQa-13-eZJ" firstAttribute="trailing" secondItem="7jU-hL-VEe" secondAttribute="trailing" constant="20" id="Zpw-g1-24L"/>
+                            <constraint firstItem="7jU-hL-VEe" firstAttribute="trailing" secondItem="VQa-13-eZJ" secondAttribute="trailing" constant="20" id="ecK-1Q-pv1"/>
+                            <constraint firstItem="VQa-13-eZJ" firstAttribute="leading" secondItem="7jU-hL-VEe" secondAttribute="leading" constant="20" id="js2-U2-fVa"/>
+                            <constraint firstItem="VQa-13-eZJ" firstAttribute="leading" secondItem="7jU-hL-VEe" secondAttribute="leading" constant="20" id="mCk-SD-aLX"/>
+                            <constraint firstItem="7jU-hL-VEe" firstAttribute="bottom" secondItem="O0h-uZ-YJK" secondAttribute="bottom" constant="20" id="pW4-7J-i06"/>
+                            <constraint firstItem="7jU-hL-VEe" firstAttribute="bottom" secondItem="VQa-13-eZJ" secondAttribute="bottom" constant="100" id="t5R-MT-t4m"/>
+                            <constraint firstItem="VQa-13-eZJ" firstAttribute="top" secondItem="7jU-hL-VEe" secondAttribute="top" constant="150" id="z7G-xo-hpr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="calendaricon" id="BKG-pZ-f9O"/>
+                    <connections>
+                        <outlet property="addButton" destination="O0h-uZ-YJK" id="ayg-ma-YhA"/>
+                        <outlet property="calendarView" destination="VQa-13-eZJ" id="xCo-WS-fwb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HeH-iD-kfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127.48091603053435" y="-430.28169014084511"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="Iw3-cV-NBO">
+            <objects>
+                <tabBarController id="4GK-L7-rTZ" customClass="MainTabBarController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hmw-Df-OpV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tNa-Gj-ldX" kind="relationship" relationship="viewControllers" id="a0o-yh-c4X"/>
+                        <segue destination="sMO-oH-HhM" kind="relationship" relationship="viewControllers" id="YfV-j2-EYe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AnK-HL-C1I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1033" y="-127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendaricon" width="25" height="25"/>
+        <image name="graphicon" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
